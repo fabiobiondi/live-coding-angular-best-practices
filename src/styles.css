@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+  /* IE10+ */
+  background-image: -ms-linear-gradient(bottom right, #40607F 0%, #17a2b8 100%);
+
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(bottom right, #40607F 0%, #17a2b8 100%);
+
+  /* Opera */
+  background-image: -o-linear-gradient(bottom right, #40607F 0%, #17a2b8 100%);
+
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0, #40607F), color-stop(100, #17a2b8));
+
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(bottom right, #40607F 0%, #17a2b8 100%);
+
+  /* W3C Markup */
+  background-image: linear-gradient(to top left, #40607F 0%, #17a2b8 100%);
+
+  height: 100%
+}
+
+/**
+  Display Pointer
+ */
+button:enabled,
+.pointer {
+  cursor: pointer;
+}
+
+/**
+  Custom hover styles for lists
+ */
+.list-group-item:hover:not(.active) {
+  background-color: #697076 !important;
+  color: white !important;
+}

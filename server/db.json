@@ -1,0 +1,52 @@
+{
+  "devices": [
+    {
+      "label": "IPhone X",
+      "os": "ios",
+      "price": 1200,
+      "rate": 4,
+      "desc": "This device is too expensive!!!!",
+      "id": 1
+    },
+    {
+      "label": "One Plus 6t",
+      "os": "android",
+      "price": 499,
+      "rate": 4,
+      "desc": "One Plus 5 is a flagship phone...",
+      "id": 2
+    },
+    {
+      "label": "Nokia 3300",
+      "price": 55,
+      "os": "ios",
+      "rate": 3,
+      "id": 7,
+      "desc": ""
+    },
+    {
+      "label": "Samsung S9",
+      "price": 499,
+      "os": "android",
+      "desc": "",
+      "rate": 4,
+      "id": 8
+    },
+    {
+      "label": "Samsung S10",
+      "price": 9993,
+      "os": "android",
+      "rate": 4,
+      "id": 9,
+      "desc": ""
+    },
+    {
+      "label": "22",
+      "price": 33,
+      "id": 10
+    }
+  ],
+  "login": {
+    "token": 123
+  }
+}
