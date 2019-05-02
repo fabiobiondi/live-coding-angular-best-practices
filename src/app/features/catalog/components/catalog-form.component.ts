@@ -37,7 +37,6 @@ import { NgForm } from '@angular/forms';
           RESET
         </button>
       </div>
-      {{update()}}
     </form>
   `,
   styles: []
@@ -62,9 +61,5 @@ export class CatalogFormComponent implements OnChanges {
   resetHandler() {
     this.reset.emit();
     this.form.reset();
-  }
-
-  update() {
-    console.log('update form')
   }
 }

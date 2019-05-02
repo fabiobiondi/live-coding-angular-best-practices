@@ -20,7 +20,6 @@ import { Device } from '../model/device';
         <i class="fa fa-trash" (click)="deleteHandler($event, device)"></i>
       </div>
     </div>
-    {{ update()}}
   `
 })
 export class CatalogListComponent {
@@ -33,9 +32,4 @@ export class CatalogListComponent {
     event.stopPropagation();
     this.delete.emit(device);
   }
-
-  update() {
-    console.log('update list')
-  }
-
 }
