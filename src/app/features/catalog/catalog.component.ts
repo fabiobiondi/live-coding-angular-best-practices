@@ -8,7 +8,7 @@ import { CatalogStore } from './services/catalog.store';
 
     <fb-card title="FORM">
       <fb-catalog-form
-        [active]="store.active"
+        [active]="store?.active"
         (save)="actions.save($event)"
         (reset)="actions.reset($event)"
       ></fb-catalog-form>

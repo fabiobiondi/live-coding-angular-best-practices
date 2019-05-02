@@ -11,9 +11,9 @@ import { NgForm } from '@angular/forms';
         type="text"
         [ngModel]="active?.label"
         name="label"
-        required
         class="form-control"
         placeholder="Device Model"
+        required
       >
       <input
         type="number"
@@ -21,10 +21,14 @@ import { NgForm } from '@angular/forms';
         name="price"
         class="form-control"
         placeholder="Price"
+        required
       >
 
       <div class="btn-group">
-        <button type="submit" class="btn btn-info">
+        <button 
+          type="submit" 
+          class="btn btn-info" 
+          [disabled]="f.invalid">
           {{active?.id ? 'EDIT' : 'ADD'}}
         </button>
 
@@ -32,14 +36,13 @@ import { NgForm } from '@angular/forms';
           type="button"
           class="btn btn-warning"
           (click)="resetHandler()"
-          *ngIf="active"
+          *ngIf="active?.id"
         >
           RESET
         </button>
       </div>
     </form>
   `,
-  styles: []
 })
 export class CatalogFormComponent implements OnChanges {
   @Input() active: Device;
@@ -53,7 +56,7 @@ export class CatalogFormComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     const active: Device = changes.active.currentValue;
-    if (!active.id) {
+    if (active && !active.id) {
       this.form.reset();
     }
   }

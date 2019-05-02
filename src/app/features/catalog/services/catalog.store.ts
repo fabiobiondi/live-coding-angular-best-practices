@@ -6,10 +6,11 @@ import { Injectable } from '@angular/core';
 })
 export class CatalogStore {
   devices: Device[];
-  active: Device = {};
+  active: Device;
 
   load(devices: Device[]) {
     this.devices = devices;
+    this.reset();
   }
 
   add(device: Device) {
@@ -17,7 +18,7 @@ export class CatalogStore {
     // this.devices.push(device);
     // immutable
     this.devices = [...this.devices, device]
-    this.active = {};
+    this.reset();
   }
 
   delete(id: number) {
@@ -26,7 +27,7 @@ export class CatalogStore {
     // this.devices.splice(index, 1);
     // immutable
     this.devices = this.devices.filter(d => d.id !== id);
-    this.active = {};
+    this.reset();
   }
 
   edit(device: Device) {
@@ -43,6 +44,6 @@ export class CatalogStore {
   }
 
   reset() {
-    this.active = {};
+    this.active = new Device();
   }
 }
